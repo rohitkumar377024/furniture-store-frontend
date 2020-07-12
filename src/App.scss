@@ -1,0 +1,52 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid pink;
+}
+
+.central-container {
+  display: flex;
+  height: 500px;
+}
+
+.left-container {
+  background: rebeccapurple;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.right-carousel {
+  background-color: pink;
+  border: 1px solid blue;
+  width: 50%;
+}
+
+.signature-text {
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.shop-btn {
+  max-width: 200px;
+  margin-top: 36px;
+  padding: 15px 45px;
+  background: none;
+  border: 2px solid black;
+  border-radius: 1.5px;
+
+  &:hover {
+    background: black;
+    color: white;
+  }
+}
