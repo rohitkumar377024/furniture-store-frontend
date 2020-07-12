@@ -1,15 +1,24 @@
 import React from 'react';
-import './App.css';
-import chair from './chair.png';
-import first from './slider-one.jpg';
-
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import './App.scss';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Home from './components/Home';
+import Shop from './components/Shop';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   return (
     <div>
-      <h1>Furniture Store</h1>
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/shop" component={Shop} exact />
+          <Route path="/about-us" component={About} exact />
+          <Route path="/contact-us" component={Contact} exact />
+        </Switch>
+      </Router>
     </div>
   );
 }
