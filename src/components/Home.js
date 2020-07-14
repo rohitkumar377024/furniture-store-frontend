@@ -7,17 +7,17 @@ const Home = () => {
   return (
     <div className="container landing-page-container d-flex flex-column">
       {/* Row 1 - Main Container */}
-      <div className="row border border-secondary flex-grow-1 d-flex">
+      <div className="row flex-grow-1 d-flex">
         {/* Col 1 Left Side - Hero Text and Shop Button */}
-        <div className="col-md-6 border border-primary d-flex flex-column justify-content-center">
+        <div className="col-md-6 d-flex flex-column justify-content-center left-container">
           <h1 className="hero-text">
             Welcome to<br></br>your dream furniture.
           </h1>
           <button className="shop-btn">SHOP NOW</button>
         </div>
         {/* Col 2 Right Side - Hero Carousel */}
-        <div className="col-md-6 border border-primary">
-          <h2 className="border border-success h-100 d-flex justify-content-center align-items-center">
+        <div className="col-md-6">
+          <h2 className="h-100 d-flex justify-content-center align-items-center">
             {/* Image Carousel */}
             <Carousel>
               <Carousel.Item>
@@ -34,10 +34,8 @@ const Home = () => {
         </div>
       </div>
       {/* Row 2 - Signature Text */}
-      <div className="row border border-success d-flex justify-content-center align-content-center">
-        <p className="border border-primary signature-text">
-          2020 • NEW DELHI - NCR
-        </p>
+      <div className="row d-flex justify-content-center align-items-center">
+        <p className="signature-text">2020 • NEW DELHI - NCR</p>
       </div>
     </div>
   );

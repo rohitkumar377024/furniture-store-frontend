@@ -1,64 +1,55 @@
 $signature-text-color: #9ba3ad;
+$bg-color: #f2f4f7;
+$main-border-color: #ffffff;
 
-// * {
-//   padding: 0;
-//   margin: 0;
-//   box-sizing: border-box;
-// }
+$sm: 768px; //Small - Mobile Friendly Territory
+$md: 992px; //Tablet Mode starts from Desktop Mode
+
+// Centering Text On Phone Sizes
+@media (max-width: $sm) {
+  .hero-text {
+    text-align: center;
+  }
+  //Center when screen = phone size small
+  .left-container {
+    align-items: center !important;
+  }
+}
+
+//Left when screen > phone size
+.left-container {
+  align-items: left;
+}
+
+body {
+  background-color: $bg-color;
+  border: 16px solid $main-border-color;
+  border-radius: 16px;
+}
 
 .landing-page-container {
-  height: calc(100vh - 56px); //500px;
+  //56px for navbar, 16px+16px for top and bottom border
+  height: calc(100vh - 56px - 16px - 16px);
 }
 
-// body {
-//   background-color: #f2f4f7;
-// }
+//Spacing Out Nav Items and Managing Text Colors
+.nav-bar-item {
+  color: #6a6a6a;
+  margin-left: 32px;
 
-// $sm: 768px; //Small - Mobile Friendly Territory
-// $md: 992px; //Tablet Mode starts from Desktop Mode
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
 
-// // Home Page
-// .main-container {
-//   display: flex;
-//   flex-direction: column;
-//   border: 1px solid pink;
-//   height: calc(100vh - 56px);
-// }
-
-// .central-container {
-//   display: flex;
-//   //   height: 500px;
-//   flex: 1;
-// }
-
-// .left-container {
-//   //   background: rebeccapurple;
-//   border: 1px solid red;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   width: 50%;
-// }
-
-// .right-carousel {
-//   display: flex;
-//   align-items: center;
-//   //   background-color: pink;
-//   border: 1px solid blue;
-//   width: 50%;
-// }
-
-.signature-text {
-  height: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $signature-text-color;
+  &:active {
+    color: #6a6a6a;
+  }
 }
 
+// Landing Page
 .hero-text {
-  font-size: 2.5em;
+  font-size: 2.2em;
   font-weight: bold;
 }
 
@@ -80,4 +71,12 @@ $signature-text-color: #9ba3ad;
     background: rgba(23, 23, 23, 0.933);
     color: white;
   }
+}
+
+.signature-text {
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $signature-text-color;
 }
