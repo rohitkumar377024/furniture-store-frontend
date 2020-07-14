@@ -1,56 +1,44 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 
+import first from '../slider-one.jpg';
+
 const Home = () => {
   return (
-    <div className="main-container">
-      <div className="central-container">
-        <div className="left-container">
-          <div className="hero-text">
-            Welcome to <br></br> your dream furniture.
-          </div>
+    <div className="container landing-page-container d-flex flex-column">
+      {/* Row 1 - Main Container */}
+      <div className="row border border-secondary flex-grow-1 d-flex">
+        {/* Col 1 Left Side - Hero Text and Shop Button */}
+        <div className="col-md-6 border border-primary d-flex flex-column justify-content-center">
+          <h1 className="hero-text">
+            Welcome to<br></br>your dream furniture.
+          </h1>
           <button className="shop-btn">SHOP NOW</button>
         </div>
-
-        <Carousel className="right-carousel">
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=First slide&bg=373940"
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=Second slide&bg=282c34"
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=Third slide&bg=20232a"
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
+        {/* Col 2 Right Side - Hero Carousel */}
+        <div className="col-md-6 border border-primary">
+          <h2 className="border border-success h-100 d-flex justify-content-center align-items-center">
+            {/* Image Carousel */}
+            <Carousel>
+              <Carousel.Item>
+                <img className="d-block w-100" src={first} alt="First slide" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="d-block w-100" src={first} alt="Third slide" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="d-block w-100" src={first} alt="Third slide" />
+              </Carousel.Item>
+            </Carousel>
+          </h2>
+        </div>
       </div>
-      <div className="signature-text">2020 • NEW DELHI - NCR</div>
+      {/* Row 2 - Signature Text */}
+      <div className="row border border-success d-flex justify-content-center align-content-center">
+        <p className="border border-primary signature-text">
+          2020 • NEW DELHI - NCR
+        </p>
+      </div>
     </div>
   );
 };

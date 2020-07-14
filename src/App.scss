@@ -1,39 +1,64 @@
-.main-container {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid pink;
+$signature-text-color: #9ba3ad;
+
+// * {
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+// }
+
+.landing-page-container {
+  height: calc(100vh - 56px); //500px;
 }
 
-.central-container {
-  display: flex;
-  height: 500px;
-}
+// body {
+//   background-color: #f2f4f7;
+// }
 
-.left-container {
-  background: rebeccapurple;
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-}
+// $sm: 768px; //Small - Mobile Friendly Territory
+// $md: 992px; //Tablet Mode starts from Desktop Mode
 
-.right-carousel {
-  background-color: pink;
-  border: 1px solid blue;
-  width: 50%;
-}
+// // Home Page
+// .main-container {
+//   display: flex;
+//   flex-direction: column;
+//   border: 1px solid pink;
+//   height: calc(100vh - 56px);
+// }
+
+// .central-container {
+//   display: flex;
+//   //   height: 500px;
+//   flex: 1;
+// }
+
+// .left-container {
+//   //   background: rebeccapurple;
+//   border: 1px solid red;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   width: 50%;
+// }
+
+// .right-carousel {
+//   display: flex;
+//   align-items: center;
+//   //   background-color: pink;
+//   border: 1px solid blue;
+//   width: 50%;
+// }
 
 .signature-text {
-  height: 56px;
+  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: $signature-text-color;
 }
 
 .hero-text {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: bold;
 }
 
@@ -44,9 +69,15 @@
   background: none;
   border: 2px solid black;
   border-radius: 1.5px;
+  font-weight: bold;
 
   &:hover {
     background: black;
+    color: white;
+  }
+
+  &:active {
+    background: rgba(23, 23, 23, 0.933);
     color: white;
   }
 }
