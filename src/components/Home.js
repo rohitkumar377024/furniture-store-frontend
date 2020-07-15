@@ -13,7 +13,7 @@ const Home = () => {
           <h1 className="hero-text">
             Welcome to<br></br>your dream furniture.
           </h1>
-          <button className="shop-btn">SHOP NOW</button>
+          <button className="custom-border">SHOP NOW</button>
         </div>
         {/* Col 2 Right Side - Hero Carousel */}
         <div className="col-md-6">

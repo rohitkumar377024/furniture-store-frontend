@@ -2,6 +2,8 @@ $signature-text-color: #9ba3ad;
 $bg-color: #f2f4f7;
 $main-border-color: #ffffff;
 
+$thin-gray-text: #9ba3ae;
+
 $sm: 768px; //Small - Mobile Friendly Territory
 $md: 992px; //Tablet Mode starts from Desktop Mode
 
@@ -27,7 +29,8 @@ body {
   border-radius: 16px;
 }
 
-.landing-page-container {
+// Use for all pages default container - landing page, etc
+.custom-container {
   //56px for navbar, 16px+16px for top and bottom border
   height: calc(100vh - 56px - 16px - 16px);
 }
@@ -53,7 +56,13 @@ body {
   font-weight: bold;
 }
 
-.shop-btn {
+// Underlines a text
+.underline {
+  text-decoration: underline;
+}
+
+//Used for Shop Button on landing page, etc
+.custom-border {
   max-width: 200px;
   margin-top: 36px;
   padding: 15px 45px;
@@ -73,10 +82,21 @@ body {
   }
 }
 
+//Used for signature text (2020 • NEW DELHI - NCR</div>) on all pages - landing page, etc
 .signature-text {
   height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: $signature-text-color;
+}
+
+// Contact Page
+.contact-detail-type {
+  color: $thin-gray-text;
+}
+
+.contact-detail-data {
+  color: black;
+  font-weight: bold;
 }
