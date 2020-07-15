@@ -5,7 +5,7 @@ import first from '../slider-one.jpg';
 
 const Home = () => {
   return (
-    <div className="container landing-page-container d-flex flex-column">
+    <div className="container custom-container d-flex flex-column">
       {/* Row 1 - Main Container */}
       <div className="row flex-grow-1 d-flex">
         {/* Col 1 Left Side - Hero Text and Shop Button */}
