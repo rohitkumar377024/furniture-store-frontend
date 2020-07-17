@@ -5,10 +5,10 @@ const Contact = () => {
     <div className="container custom-container d-flex flex-column">
       <div className="row flex-grow-1">
         <div className="col-md-6 d-flex flex-column justify-content-center align-items-center">
-          <h1>Contact Us Me</h1>
-          <button className="custom-border">Let's Talk :)</button>
+          <h1>Contact Us Me.</h1>
+          <button className="custom-border">LETS TALK :)</button>
         </div>
-        <div className="col-md-6 d-flex flex-column justify-content-center align-items-center">
+        <div className="col-md-6 d-flex flex-column justify-content-center align-items-center contact-details">
           <div className="container d-flex justify-content-center">
             <div className="d-flex flex-column mr-5">
               <p className="contact-detail-type">PHONE</p>
