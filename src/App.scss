@@ -11,15 +11,28 @@ $search-bar-bg: #fcfcfc;
 $sm: 768px; //Small - Mobile Friendly Territory
 $md: 992px; //Tablet Mode starts from Desktop Mode
 
+//Search bar size
+@media (max-width: $md) {
+  .search {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: $sm) {
+  .search {
+    width: 100% !important;
+  }
+}
+
 //HANDLING FOR SHOP SCREEN IMAGES BELOW
 @media (max-width: $md) {
   .category {
-    flex-basis: 33% !important;
+    flex-basis: calc(33% - 20px) !important;
   }
 }
 @media (max-width: $sm) {
   .category {
-    flex-basis: 50% !important;
+    flex-basis: calc(50% - 20px) !important;
   }
 }
 //HANDLING FOR SHOP SCREEN IMAGES ABOVE
@@ -162,12 +175,16 @@ body {
 }
 
 // Shop screen
+.shop-title-text {
+  margin-top: 16px;
+}
+
 .search {
   background-color: $search-bar-bg;
   color: $search-bar-color;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 95%;
-  margin-top: 36px;
+  width: 60%;
+  margin-top: 16px;
   padding: 15px 45px;
   border-radius: 6px;
   font-weight: bold;
@@ -183,39 +200,26 @@ body {
   }
 }
 
+.categories {
+  margin-top: 32px;
+}
+
 .category {
   background-color: $search-bar-bg;
   color: $search-bar-color;
-
-  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.1);
-
-  // width: 200px;
-
-  // width: 20%;
-
-  // flex: 1;
-  flex-basis: 25%;
-
-  // height: 250px;
-
-  // margin-top: 36px;
-
-  // padding: 15px;
-
-  // margin: 16px 8px;
-
-  // padding: 25px;
-
   border-radius: 6px;
   font-weight: bold;
+  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.1);
+  flex-basis: calc(25% - 20px);
+  margin: 10px;
 
-  // &:hover {
-  //   background: black;
-  //   color: white;
-  // }
+  &:hover {
+    background: black;
+    color: white;
+  }
 
-  // &:active {
-  //   background: rgba(23, 23, 23, 0.933);
-  //   color: white;
-  // }
+  &:active {
+    background: rgba(23, 23, 23, 0.933);
+    color: white;
+  }
 }

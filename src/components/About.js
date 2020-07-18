@@ -64,7 +64,6 @@ const About = () => {
             <h1>
               Web Developer. <br></br> UI/UX Designer.
             </h1>
-            <div class="red-line"></div>
             <button className="custom-border about-bottom-page-btn">
               DESIGNED IN FIGMA. BUILT IN REACT.
             </button>

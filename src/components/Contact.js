@@ -6,6 +6,7 @@ const Contact = () => {
       <div className="row flex-grow-1">
         <div className="col-md-6 d-flex flex-column justify-content-center align-items-center">
           <h1>Contact Us Me.</h1>
+          <div class="red-line"></div>
           <button className="custom-border">LETS TALK :)</button>
         </div>
         <div className="col-md-6 d-flex flex-column justify-content-center align-items-center contact-details">
