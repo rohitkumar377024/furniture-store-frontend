@@ -1,0 +1,17 @@
+// Widths
+$sm: 768px; //Phone
+$md: 992px; //Table
+
+// Media Queries
+@media (max-width: $sm) {
+  .about-text { text-align: center; }
+}
+@media (max-width: 500px) {
+  //Making text a bit smaller for this size
+  .about-text { font-size: 1.15em; }
+}
+
+.about-text {
+  width: 70%;
+  line-height: 1.4;
+}

@@ -1,0 +1,10 @@
+// Colors
+$signature-text-color: #9ba3ad;
+
+.signature-text {
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $signature-text-color;
+}

@@ -1,0 +1,16 @@
+$hover-background-color: black;
+$hover-text-color: white;
+$clicked-background-color: rgba(23, 23, 23, 0.933);
+$clicked-text-color: white;
+
+.custom-border {
+  width: 300px;
+  margin-top: 36px;
+  padding: 15px 45px;
+  background: none;
+  border: 2px solid black;
+  border-radius: 1.5px;
+  font-weight: bold;
+  &:hover { background: $hover-background-color; color: $hover-text-color; }
+  &:active { background: $clicked-background-color; color: $clicked-text-color; }
+}

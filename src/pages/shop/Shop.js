@@ -1,5 +1,6 @@
 import React from 'react';
-import categoryImage from '../category.png';
+import categoryImage from '../../assets/category.png';
+import './shop.scss';
 
 const Shop = () => {
   return (

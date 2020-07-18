@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './navbar.scss';
 
 const NavBar = () => {
   return (
@@ -11,16 +12,24 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
           <Nav>
             <Nav.Link>
-              <Link className='nav-bar-item' to="/">Home</Link>
+              <Link className="nav-bar-item" to="/">
+                Home
+              </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link className='nav-bar-item' to="/shop">Shop</Link>
+              <Link className="nav-bar-item" to="/shop">
+                Shop
+              </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link className='nav-bar-item' to="/about-us">About Us</Link>
+              <Link className="nav-bar-item" to="/about-us">
+                About Us
+              </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link className='nav-bar-item' to="/contact-us">Contact Us</Link>
+              <Link className="nav-bar-item" to="/contact-us">
+                Contact Us
+              </Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

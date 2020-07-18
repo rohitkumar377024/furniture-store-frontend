@@ -1,53 +1,11 @@
-$signature-text-color: #9ba3ad;
 $bg-color: #f2f4f7;
 $main-border-color: #ffffff;
 
-$thin-gray-text: #9ba3ae;
-$red-line-color: #df2e2e;
-
-$search-bar-color: #9ba3ad;
-$search-bar-bg: #fcfcfc;
-
-$sm: 768px; //Small - Mobile Friendly Territory
-$md: 992px; //Tablet Mode starts from Desktop Mode
-
-//Search bar size
-@media (max-width: $md) {
-  .search {
-    width: 80% !important;
-  }
-}
-
-@media (max-width: $sm) {
-  .search {
-    width: 100% !important;
-  }
-}
-
-//HANDLING FOR SHOP SCREEN IMAGES BELOW
-@media (max-width: $md) {
-  .category {
-    flex-basis: calc(33% - 20px) !important;
-  }
-}
-@media (max-width: $sm) {
-  .category {
-    flex-basis: calc(50% - 20px) !important;
-  }
-}
-//HANDLING FOR SHOP SCREEN IMAGES ABOVE
+$sm: 768px; //Phone
+$md: 992px; //Table
 
 // Centering Text On Phone Sizes
 @media (max-width: $sm) {
-  .hero-text {
-    text-align: center;
-  }
-
-  //Center when screen = phone size small (this is on landing page)
-  .left-container {
-    align-items: center !important;
-  }
-
   //contact page on phone size
   .contact-details {
     justify-content: start !important;
@@ -59,27 +17,7 @@ $md: 992px; //Tablet Mode starts from Desktop Mode
   }
 }
 
-//Breakpoint for about page text - spacing upper side
-@media (max-width: 500px) {
-  //Making text a bit smaller for this size
-  .about-text {
-    font-size: 1.15em;
-  }
-}
-
-//Used in about and contact page
-.red-line {
-  width: 70px;
-  height: 2px;
-  transform: rotate(-30deg) translateX(35px) translateY(-15px);
-  background-color: $red-line-color;
-}
-
-//Left when screen > phone size
-.left-container {
-  align-items: left;
-}
-
+//White border for every page
 body {
   background-color: $bg-color;
   border: 16px solid $main-border-color;
@@ -90,136 +28,4 @@ body {
 .custom-container {
   //56px for navbar, 16px+16px for top and bottom border
   height: calc(100vh - 56px - 16px - 16px);
-}
-
-//Spacing Out Nav Items and Managing Text Colors
-.nav-bar-item {
-  color: #6a6a6a;
-  margin-left: 32px;
-
-  &:hover {
-    color: black;
-    text-decoration: none;
-  }
-
-  &:active {
-    color: #6a6a6a;
-  }
-}
-
-// Landing Page
-.hero-text {
-  font-size: 2.2em;
-  font-weight: bold;
-}
-
-// Underlines a text
-.underline {
-  text-decoration: underline;
-}
-
-//Used for Shop Button on landing page, etc
-.custom-border {
-  // max-width: 200px;
-  width: 300px;
-  margin-top: 36px;
-  padding: 15px 45px;
-  background: none;
-  border: 2px solid black;
-  border-radius: 1.5px;
-  font-weight: bold;
-
-  &:hover {
-    background: black;
-    color: white;
-  }
-
-  &:active {
-    background: rgba(23, 23, 23, 0.933);
-    color: white;
-  }
-}
-
-// Used for signature text (2020 • NEW DELHI - NCR</div>) on all pages - landing page, etc
-.signature-text {
-  height: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $signature-text-color;
-}
-
-.contact-detail-type {
-  color: $thin-gray-text;
-  margin-top: 16px;
-}
-
-.contact-detail-data {
-  color: black;
-  font-weight: bold;
-  margin-top: 16px;
-}
-
-//about page
-.about-text {
-  width: 70%;
-  line-height: 1.4;
-}
-
-//Making text smaller a bit for this one
-//removing horizontal padding to give more space
-.about-bottom-page-btn {
-  font-size: 0.9em;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-// Shop screen
-.shop-title-text {
-  margin-top: 16px;
-}
-
-.search {
-  background-color: $search-bar-bg;
-  color: $search-bar-color;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 60%;
-  margin-top: 16px;
-  padding: 15px 45px;
-  border-radius: 6px;
-  font-weight: bold;
-
-  &:hover {
-    background: black;
-    color: white;
-  }
-
-  &:active {
-    background: rgba(23, 23, 23, 0.933);
-    color: white;
-  }
-}
-
-.categories {
-  margin-top: 32px;
-}
-
-.category {
-  background-color: $search-bar-bg;
-  color: $search-bar-color;
-  border-radius: 6px;
-  font-weight: bold;
-  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.1);
-  flex-basis: calc(25% - 20px);
-  margin: 10px;
-
-  &:hover {
-    background: black;
-    color: white;
-  }
-
-  &:active {
-    background: rgba(23, 23, 23, 0.933);
-    color: white;
-  }
 }

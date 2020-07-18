@@ -1,0 +1,33 @@
+// Colors
+$details-type-text-color: #9ba3ae;
+$details-data-text-color: black;
+$details-data-hover-text-color: rgb(89, 89, 89);
+
+// Widths
+$sm: 768px; //Phone
+$md: 992px; //Table
+
+// Media Queries
+@media (max-width: $sm) {
+  .contact-details {
+    justify-content: start !important;
+  }
+}
+
+.contact-detail-type {
+  color: $details-type-text-color;
+  margin-top: 16px;
+}
+
+.contact-detail-data {
+  color: $details-data-text-color;
+  font-weight: bold;
+  margin-top: 16px;
+  &:hover {
+    color: $details-data-hover-text-color;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}

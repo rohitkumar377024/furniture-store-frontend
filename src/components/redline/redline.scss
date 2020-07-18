@@ -1,0 +1,9 @@
+// Colors
+$red-line-color: #df2e2e;
+
+.red-line {
+  width: 70px;
+  height: 2px;
+  transform: rotate(-30deg) translateX(35px) translateY(-15px);
+  background-color: $red-line-color;
+}
