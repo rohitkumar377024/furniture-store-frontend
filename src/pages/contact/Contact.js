@@ -1,5 +1,5 @@
 import React from 'react';
-import BorderButton from '../../components/borderbutton/BorderButton.js';
+import BorderText from '../../components/bordertext/BorderText';
 import RedLine from '../../components/redline/RedLine';
 import './contact.scss';
 import SignatureText from '../../components/signaturetext/SignatureText';
@@ -11,7 +11,7 @@ const Contact = () => {
         <div className="col-md-6 d-flex flex-column justify-content-center align-items-center">
           <h1>Contact Us Me.</h1>
           <RedLine />
-          <BorderButton text="LETS TALK :)" />
+          <BorderText text="LETS TALK :)" />
         </div>
         <div className="col-md-6 d-flex flex-column justify-content-center align-items-center contact-details">
           <div className="container d-flex justify-content-center">

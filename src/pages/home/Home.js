@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import './home.scss';
 import SignatureText from '../../components/signaturetext/SignatureText';
-import BorderButton from '../../components/borderbutton/BorderButton';
+import { Link } from 'react-router-dom';
 
 import first from '../../assets/slider-one.jpg';
 
@@ -14,7 +14,9 @@ const Home = () => {
           <h1 className="hero-text">
             Welcome to<br></br>your dream furniture.
           </h1>
-          <BorderButton text="SHOP NOW" />
+          <Link className="custom-border shop-btn no-underline-hover" to="/shop">
+            SHOP NOW
+          </Link>
         </div>
         <div className="col-md-6">
           <h2 className="h-100 d-flex justify-content-center align-items-center">

@@ -1,5 +1,5 @@
 import React from 'react';
-import BorderButton from '../../components/borderbutton/BorderButton';
+import BorderText from '../../components/bordertext/BorderText';
 import RedLine from '../../components/redline/RedLine';
 import './about.scss';
 import SignatureText from '../../components/signaturetext/SignatureText';
@@ -12,7 +12,7 @@ const About = () => {
           <div className="col-md-6 d-flex flex-column justify-content-center align-items-center">
             <h1>About Us Me.</h1>
             <RedLine />
-            <BorderButton text="MADE BY ROHIT KUMAR" />
+            <BorderText text="MADE BY ROHIT KUMAR" />
           </div>
           <div className="col-md-6 d-flex flex-column justify-content-center align-items-center">
             <p className="h5 about-text">
@@ -68,7 +68,7 @@ const About = () => {
             <h1>
               Web Developer. <br></br> UI/UX Designer.
             </h1>
-            <BorderButton text="DESIGNED IN FIGMA. BUILT IN REACT." />
+            <BorderText text="DESIGNED IN FIGMA. BUILT IN REACT." />
           </div>
         </div>
         <SignatureText />

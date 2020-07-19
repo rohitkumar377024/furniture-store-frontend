@@ -1,7 +1,6 @@
 import React from 'react';
-import categoryImage from '../../assets/category.png';
+import Category from '../../components/category/Category';
 import './shop.scss';
-
 const Shop = () => {
   return (
     <div className="container">
@@ -14,45 +13,14 @@ const Shop = () => {
         </div>
         <div className="col">
           <div className="categories d-flex justify-content-center flex-wrap">
-            <div className="category d-flex flex-column align-items-center">
-              <img className="img-fluid" src={categoryImage} alt="" />
-              <p>Category</p>
-            </div>
-
-            <div className="category d-flex flex-column align-items-center">
-              <img className="img-fluid" src={categoryImage} alt="" />
-              <p>Category</p>
-            </div>
-
-            <div className="category d-flex flex-column align-items-center">
-              <img className="img-fluid" src={categoryImage} alt="" />
-              <p>Category</p>
-            </div>
-
-            <div className="category d-flex flex-column align-items-center">
-              <img className="img-fluid" src={categoryImage} alt="" />
-              <p>Category</p>
-            </div>
-
-            <div className="category d-flex flex-column align-items-center">
-              <img className="img-fluid" src={categoryImage} alt="" />
-              <p>Category</p>
-            </div>
-
-            <div className="category d-flex flex-column align-items-center">
-              <img className="img-fluid" src={categoryImage} alt="" />
-              <p>Category</p>
-            </div>
-
-            <div className="category d-flex flex-column align-items-center">
-              <img className="img-fluid" src={categoryImage} alt="" />
-              <p>Category</p>
-            </div>
-
-            <div className="category d-flex flex-column align-items-center">
-              <img className="img-fluid" src={categoryImage} alt="" />
-              <p>Category</p>
-            </div>
+            <Category type="chairs" />
+            <Category type="beds" />
+            <Category type="tables" />
+            <Category type="appliances" />
+            <Category type="storage" />
+            <Category type="dining" />
+            <Category type="workstation" />
+            <Category type="utilities" />
           </div>
         </div>
       </div>

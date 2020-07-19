@@ -1,7 +1,7 @@
 import React from 'react';
-import './borderbutton.scss';
+import './bordertext.scss';
 
-const BorderButton = ({ text }) => {
+const BorderText = ({ text }) => {
   return (
     <div>
       <button className="custom-border">{text}</button>
@@ -9,4 +9,4 @@ const BorderButton = ({ text }) => {
   );
 };
 
-export default BorderButton;
+export default BorderText;

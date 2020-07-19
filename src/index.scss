@@ -3,6 +3,35 @@
 //Fonts
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@700&family=Raleway:wght@700&display=swap');
 
+//Variables
+$bg-color: #f2f4f7;
+$main-border-color: #ffffff;
+
+// Global Styles
+.no-underline-hover {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+//Standard Style
+//White border for every page
+body {
+  background-color: $bg-color;
+  border: 16px solid $main-border-color;
+  border-radius: 16px;
+}
+
+// Use for all pages default container - landing page, etc
+.custom-container {
+  //56px for navbar, 16px+16px for top and bottom border
+  height: calc(100vh - 56px - 16px - 16px);
+}
+
 //Defaults
 body {
   margin: 0;
