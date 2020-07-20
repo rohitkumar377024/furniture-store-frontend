@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './productlist.scss';
-import categoryImage from '../../assets/category.png';
+import Product from '../../components/product/Product';
+import { ProductContext } from '../../contexts/ProductContext';
 
 const ProductList = props => {
   const type = props.match.params.id;
+
+  const [products, setProducts] = useContext(ProductContext);
 
   return (
     <div className="container">
@@ -12,17 +15,9 @@ const ProductList = props => {
           <h1 className="capitalize">{type}</h1>
         </div>
         <div className="col d-flex justify-content-center flex-wrap">
-          {/* HERE WE GO */}
-
-          {[...Array(9).keys()].map(num => (
-            <div className="product d-flex flex-column align-items-center no-underline-hover">
-              <img className="img-fluid" src={categoryImage} alt="" />
-              <p className="w-100 product-name">Product Name</p>
-              <p className="w-100 product-price">Product Price</p>
-            </div>
+          {products.map(product => (
+            <Product name={product.name} price={product.price} />
           ))}
-
-          {/* HERE WE STOP */}
         </div>
       </div>
     </div>

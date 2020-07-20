@@ -6,20 +6,23 @@ import Shop from './pages/shop/Shop';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import ProductList from './pages/productlist/ProductList';
+import { ProductProvider } from './contexts/ProductContext';
 
 function App() {
   return (
     <div>
-      <Router>
-        <NavBar />
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/shop" component={Shop} exact />
-          <Route path="/about-us" component={About} exact />
-          <Route path="/contact-us" component={Contact} exact />
-          <Route path="/product-list/:id" component={ProductList} exact />
-        </Switch>
-      </Router>
+      <ProductProvider>
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route path="/" component={Home} exact />
+            <Route path="/shop" component={Shop} exact />
+            <Route path="/about-us" component={About} exact />
+            <Route path="/contact-us" component={Contact} exact />
+            <Route path="/product-list/:id" component={ProductList} exact />
+          </Switch>
+        </Router>
+      </ProductProvider>
     </div>
   );
 }
