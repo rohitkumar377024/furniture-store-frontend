@@ -1,0 +1,119 @@
+// Colors
+$red-color: #df2e2e;
+$description-color: #6a6a6a;
+$hover-color: #d32b2b;
+$clicked-color: #bf1717;
+
+$default-width: 70%;
+
+// Widths
+$sm: 768px; //Phone
+$md: 992px; //Table
+
+// Media Queries
+@media (max-width: 575px) {
+  .product-details-carousel {
+    width: 70%;
+    border: 5px solid lightpink !important;
+  }
+
+  .details-heading {
+    font-size: 1.5em !important;
+  }
+
+  .details-subheading {
+    width: 100% !important;
+    // margin-left: 24px;
+  }
+
+  .details-description {
+    width: 100% !important;
+    // margin-left: 24px;
+  }
+
+  .details-price {
+    width: 90% !important;
+    margin-left: 24px;
+  }
+
+  .add-to-cart-btn {
+    width: 90% !important;
+    margin-left: 24px;
+  }
+}
+
+@media (max-width: $md) {
+  .product-details-carousel {
+    // border: 5px solid lightsalmon !important;
+  }
+
+  .details-heading {
+    width: 90% !important;
+    margin-left: 24px;
+  }
+
+  .details-subheading {
+    width: 90% !important;
+    margin-left: 24px;
+  }
+
+  .details-description {
+    width: 90% !important;
+    margin-left: 24px;
+  }
+
+  .details-price {
+    width: 90% !important;
+    margin-left: 24px;
+  }
+
+  .add-to-cart-btn {
+    width: 90% !important;
+    margin-left: 24px;
+  }
+}
+
+.details-heading {
+  width: $default-width;
+  font-size: 2.3em;
+  font-weight: bold;
+}
+
+.details-subheading {
+  width: $default-width;
+  color: $red-color;
+  text-align: left;
+}
+
+.details-description {
+  color: $description-color;
+  width: $default-width;
+  text-align: justify;
+  line-height: 1.4;
+  margin-top: 16px;
+}
+
+.details-price {
+  color: $red-color;
+  font-size: 1.5em;
+  font-weight: bold;
+  width: $default-width;
+  text-align: left;
+}
+
+.add-to-cart-btn {
+  background-color: $red-color;
+  color: white;
+  width: $default-width; //300px;
+  margin-top: 16px;
+  padding: 10px 45px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  &:hover {
+    background: $hover-color;
+  }
+  &:active {
+    background: $clicked-color;
+  }
+}
