@@ -13,14 +13,14 @@ const Shop = () => {
         </div>
         <div className="col">
           <div className="categories d-flex justify-content-center flex-wrap">
-            <Category type="chairs" />
-            <Category type="beds" />
+            <Category type="sofas" />
+            <Category type="seating" />
             <Category type="tables" />
-            <Category type="appliances" />
+            <Category type="beds" />
             <Category type="storage" />
+            <Category type="decor" />
             <Category type="dining" />
-            <Category type="workstation" />
-            <Category type="utilities" />
+            <Category type="cupboards" />
           </div>
         </div>
       </div>
