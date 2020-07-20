@@ -1,3 +1,29 @@
-.category-2 {
-  color: lightpink;
+// Colors
+$search-bar-color: #9ba3ad;
+$search-bar-bg: #fcfcfc;
+
+// Widths
+$sm: 768px; //Mobile
+$md: 992px; //Tablet
+
+// Media Queries
+// Category Image Responsiveness
+@media (max-width: $md) {
+    .category { flex-basis: calc(33% - 20px) !important; }
 }
+@media (max-width: $sm) {
+    .category { flex-basis: calc(50% - 20px) !important; }
+}
+
+.category {
+    background-color: $search-bar-bg;
+    color: $search-bar-color;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(25% - 20px);
+    margin: 10px;
+    &:hover { background: black; color: white; }
+    &:active { background: rgba(23, 23, 23, 0.933); color: white; }
+  }
+  

@@ -14,13 +14,6 @@ $search-bar-bg: #fcfcfc;
 @media (max-width: $sm) {
   .search { width: 100% !important;}
 }
-//Category Image Responsiveness
-@media (max-width: $md) {
-  .category { flex-basis: calc(33% - 20px) !important; }
-}
-@media (max-width: $sm) {
-  .category { flex-basis: calc(50% - 20px) !important; }
-}
 
 .shop-title-text { margin-top: 16px; }
 .categories { margin-top: 32px; }
@@ -35,17 +28,5 @@ $search-bar-bg: #fcfcfc;
   border-radius: 6px;
   font-weight: bold;
   &:hover { background: black; color: white;}
-  &:active { background: rgba(23, 23, 23, 0.933); color: white; }
-}
-
-.category {
-  background-color: $search-bar-bg;
-  color: $search-bar-color;
-  border-radius: 6px;
-  font-weight: bold;
-  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.1);
-  flex-basis: calc(25% - 20px);
-  margin: 10px;
-  &:hover { background: black; color: white; }
   &:active { background: rgba(23, 23, 23, 0.933); color: white; }
 }
