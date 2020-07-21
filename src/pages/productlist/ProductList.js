@@ -9,7 +9,7 @@ const ProductList = props => {
   //This gets us the type of category -> chair, table, etc.
   const type = props.match.params.id;
 
-  //We extract the specific object [chairs for example]
+  //We extract the specific object from products array [e.g. chairs]
   //and take its data in specificTypeProducts [renamed]
   const { [type]: specificTypeProducts } = products;
 
@@ -21,7 +21,11 @@ const ProductList = props => {
         </div>
         <div className="col d-flex justify-content-center flex-wrap">
           {specificTypeProducts.map(product => (
-            <Product name={product.name} price={product.price} />
+            <Product
+              name={product.name}
+              price={product.price}
+              productID={product.productID}
+            />
           ))}
         </div>
       </div>
