@@ -6,16 +6,13 @@ import { CartContext } from '../../contexts/CartContext';
 const Cart = () => {
   const [cartItems, setCartItems] = useContext(CartContext);
 
-  // console.log(cartItems);
-
   //Let's compute amount info - subtotal, some shipping cost and total cost
   //Taking sum of all individual cart items total costs
 
   //Below for subtotal, we are using ternary, so that if there are no cartitems, subtotal = 0
-  const subtotal = 0;
-  // const subtotal = cartItems
-  //   .map(cartItem => cartItem.totalCost)
-  //   .reduce((acc, curr) => acc + curr, 0);
+  const subtotal = cartItems
+    .map(cartItem => cartItem.totalCost)
+    .reduce((acc, curr) => acc + curr, 0);
 
   const shippingCost = 50;
   const totalCost = subtotal + shippingCost;
@@ -64,18 +61,6 @@ const Cart = () => {
     });
   };
 
-  // // Utility function for above callback to remove cart item
-  // const removeCartItem = id => {
-  //   setCartItems(prevCartItems => {
-  //     if (prevCartItems !== undefined) {
-  //       const updated = prevCartItems.filter(item => item.productID !== id);
-  //       return updated;
-  //     } else {
-  //       return prevCartItems;
-  //     }
-  //   });
-  // };
-
   return (
     <div className="container custom-container">
       <div className="row d-flex flex-column">
@@ -102,22 +87,30 @@ const Cart = () => {
           {console.log(cartItems)}
         </div>
         <div className="col">
-          <div className="container d-flex justify-content-center">
-            <div className="d-flex flex-column mr-5">
-              <p className="amount-type">SUBTOTAL</p>
-              <p className="amount-type">SHIPPING</p>
-              <p className="amount-type">TOTAL</p>
+          {subtotal > 0 ? (
+            <div className="container d-flex justify-content-center">
+              <div className="d-flex flex-column mr-5">
+                <p className="amount-type">SUBTOTAL</p>
+                <p className="amount-type">SHIPPING</p>
+                <p className="amount-type">TOTAL</p>
+              </div>
+              <div className="d-flex flex-column">
+                <p className="amount-detail">₹{subtotal}</p>
+                <p className="amount-detail">₹{shippingCost}</p>
+                <p className="amount-detail">₹{totalCost}</p>
+              </div>
             </div>
-            <div className="d-flex flex-column">
-              <p className="amount-detail">₹{subtotal}</p>
-              <p className="amount-detail">₹{shippingCost}</p>
-              <p className="amount-detail">₹{totalCost}</p>
-            </div>
+          ) : (
+            ''
+          )}
+        </div>
+        {subtotal > 0 ? (
+          <div className="col d-flex justify-content-center">
+            <button className="checkout-btn">CHECKOUT</button>
           </div>
-        </div>
-        <div className="col d-flex justify-content-center">
-          <button className="checkout-btn">CHECKOUT</button>
-        </div>
+        ) : (
+          <div className="text-center">No Items Right Now.</div>
+        )}
       </div>
     </div>
   );
