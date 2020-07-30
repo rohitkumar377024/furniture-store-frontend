@@ -6,7 +6,7 @@ import { CartContext } from '../../contexts/CartContext';
 const Cart = () => {
   const [cartItems, setCartItems] = useContext(CartContext);
 
-  console.log(cartItems);
+  // console.log(cartItems);
 
   //Let's compute amount info - subtotal, some shipping cost and total cost
   //Taking sum of all individual cart items total costs
@@ -24,87 +24,55 @@ const Cart = () => {
   const incrementItem = id => {
     setCartItems(prevCartItems => {
       const updatedItems = prevCartItems.map(item => {
-        if (item.productID === id) {
-          return {
-            ...item,
-            quantity: item.quantity + 1,
-            totalCost: item.totalCost + item.price
-          };
-        } else {
-          return item;
+        if (item !== undefined) {
+          if (item.productID === id) {
+            return {
+              ...item,
+              quantity: item.quantity + 1,
+              totalCost: item.totalCost + item.price
+            };
+          } else {
+            return item;
+          }
         }
       });
-      return updatedItems;
+      return updatedItems.filter(item => item !== undefined);
     });
   };
 
-  // Utility function for above callback to remove cart item
-  const removeCartItem = id => {
-    setCartItems(prevCartItems => {
-      if (prevCartItems !== undefined) {
-        const updated = prevCartItems.filter(item => item.productID !== id);
-        return updated;
-      } else {
-        return prevCartItems;
-      }
-    });
-  };
-
-  // Callback function ->
-  // Takes ProductID and decrements cart item details by 1 or removes if only one
   const decrementItem = id => {
     setCartItems(prevCartItems => {
-      removeCartItem(id);
-      // let quantity = -1;
-
-      // prevCartItems.map(item => {
-      //   //Match found for product using ID
-      //   if (item.productID === id) {
-      //     quantity = item.quantity;
-      //   }
-      // });
-
-      // if (quantity === 1) {
-      //   //If quantity of item === 1, remove using filter
-      //   return removeCartItem(id);
-      // }
-
-      // if (quantity > 1) {
-      //   //If quantity > 1, reduce quantity and total cost
-      //   return prevCartItems.map(item => {
-      //     if (item.productID === id) {
-      //       return {
-      //         ...item,
-      //         quantity: item.quantity - 1,
-      //         totalCost: item.totalCost - item.price
-      //       };
-      //     }
-      //   });
-      // }
+      const updatedItems = prevCartItems.map(item => {
+        if (item !== undefined) {
+          if (item.productID === id) {
+            if (item.quantity > 1) {
+              return {
+                ...item,
+                quantity: item.quantity - 1,
+                totalCost: item.totalCost - item.price
+              };
+            } else {
+              return;
+              //   alert('1 hi bacha bhai');
+            }
+          } else {
+            return item;
+          }
+        }
+      });
+      return updatedItems.filter(item => item !== undefined);
     });
   };
 
-  // //Callback function -> Takes ProductID and decrements cart item details by 1
-  // const decrementItem = id => {
+  // // Utility function for above callback to remove cart item
+  // const removeCartItem = id => {
   //   setCartItems(prevCartItems => {
-  //     const updatedItems = prevCartItems.map(item => {
-  //       if (item.productID === id) {
-  //         if (item.quantity === 1) {
-  //           //Remove cart item -> if only 1 quantity is there and minus button clicked
-  //           return removeCartItem(id);
-  //         } else {
-  //           return {
-  //             ...item,
-  //             quantity: item.quantity - 1,
-  //             totalCost: item.totalCost - item.price
-  //           };
-  //         }
-  //       } else {
-  //         return item;
-  //       }
-  //     });
-
-  //     return updatedItems;
+  //     if (prevCartItems !== undefined) {
+  //       const updated = prevCartItems.filter(item => item.productID !== id);
+  //       return updated;
+  //     } else {
+  //       return prevCartItems;
+  //     }
   //   });
   // };
 
@@ -115,8 +83,10 @@ const Cart = () => {
           <h1>Cart</h1>
         </div>
         <div className="col">
-          {cartItems &&
-            cartItems.map(cartItem => (
+          {cartItems.map(cartItem =>
+            cartItem === undefined ? (
+              'No Items in Cart'
+            ) : (
               <CartItem
                 key={cartItem.productID}
                 id={cartItem.productID}
@@ -127,7 +97,9 @@ const Cart = () => {
                 increment={incrementItem}
                 decrement={decrementItem}
               />
-            ))}
+            )
+          )}
+          {console.log(cartItems)}
         </div>
         <div className="col">
           <div className="container d-flex justify-content-center">
