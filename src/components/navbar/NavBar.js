@@ -22,6 +22,11 @@ const NavBar = () => {
               </Link>
             </Nav.Link>
             <Nav.Link>
+              <Link className="nav-bar-item" to="/cart">
+                Cart
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
               <Link className="nav-bar-item" to="/about-us">
                 About Us
               </Link>

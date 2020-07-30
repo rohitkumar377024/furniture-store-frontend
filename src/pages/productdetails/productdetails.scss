@@ -40,6 +40,11 @@ $md: 992px; //Table
     width: 90% !important;
     margin-left: 24px;
   }
+
+  .remove-from-cart-btn {
+    width: 90% !important;
+    margin-left: 24px;
+  }
 }
 
 @media (max-width: $md) {
@@ -116,4 +121,22 @@ $md: 992px; //Table
   &:active {
     background: $clicked-color;
   }
+}
+
+.remove-from-cart-btn {
+  // background-color: $red-color;
+  color: $red-color;
+  width: $default-width; //300px;
+  margin-top: 16px;
+  padding: 10px 45px;
+  border: 2px solid $red-color;
+  border-radius: 4px;
+  font-weight: bold;
+  &:hover {
+    border-color: rgb(208, 78, 78);
+    color: rgb(208, 78, 78);
+  }
+  // &:active {
+  //   border-color: $clicked-color;
+  // }
 }
