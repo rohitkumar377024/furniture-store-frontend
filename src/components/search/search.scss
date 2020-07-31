@@ -1,0 +1,55 @@
+// Widths
+$sm: 768px; //Mobile
+$md: 992px; //Tablet
+
+// Colors
+$search-bar-bg: #fcfcfc;
+$search-result-hover: #e6f0ff;
+
+$search-light: #9ba3ad;
+
+// Media Queries
+// Search Bar Width
+@media (max-width: $md) {
+  .search {
+    width: 80% !important;
+  }
+}
+@media (max-width: $sm) {
+  .search {
+    width: 100% !important;
+  }
+}
+
+.search {
+  background-color: $search-bar-bg;
+  color: $search-light;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  margin-top: 16px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.search-bar {
+  padding: 15px 45px 0;
+}
+
+.search-result {
+  list-style: none;
+  padding: 10px;
+  color: $search-light;
+  &:hover {
+    background: $search-result-hover;
+    color: black;
+  }
+  &:nth-child(1) {
+    margin-top: 12px;
+  }
+}
+
+.divider {
+  height: 0.5px;
+  width: 100%;
+  background: rgba(155, 163, 174, 0.28);
+}

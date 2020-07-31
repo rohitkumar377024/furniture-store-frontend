@@ -1,6 +1,8 @@
 import React from 'react';
 import Category from '../../components/category/Category';
+import Search from '../../components/search/Search';
 import './shop.scss';
+
 const Shop = () => {
   return (
     <div className="container">
@@ -9,7 +11,7 @@ const Shop = () => {
           <h1 className="shop-title-text text-center">
             Search your dream furniture
           </h1>
-          <div className="search">Search</div>
+          <Search />
         </div>
         <div className="col">
           <div className="categories d-flex justify-content-center flex-wrap">

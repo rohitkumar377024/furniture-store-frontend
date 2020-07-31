@@ -8,28 +8,22 @@ import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import ProductList from './pages/productlist/ProductList';
 import ProductDetails from './pages/productdetails/ProductDetails';
-import { ProductProvider } from './contexts/ProductContext';
-import { CartProvider } from './contexts/CartContext';
 
 function App() {
   return (
     <div>
-      <ProductProvider>
-        <CartProvider>
-          <Router>
-            <NavBar />
-            <Switch>
-              <Route path="/" component={Home} exact />
-              <Route path="/shop" component={Shop} exact />
-              <Route path="/cart" component={Cart} exact />
-              <Route path="/about-us" component={About} exact />
-              <Route path="/contact-us" component={Contact} exact />
-              <Route path="/product-list/:id" component={ProductList} exact />
-              <Route path="/product-details/:id" component={ProductDetails} exact />
-            </Switch>
-          </Router>
-        </CartProvider>
-      </ProductProvider>
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/shop" component={Shop} exact />
+          <Route path="/cart" component={Cart} exact />
+          <Route path="/about-us" component={About} exact />
+          <Route path="/contact-us" component={Contact} exact />
+          <Route path="/product-list/:id" component={ProductList} exact />
+          <Route path="/product-details/:id" component={ProductDetails} exact />
+        </Switch>
+      </Router>
     </div>
   );
 }
