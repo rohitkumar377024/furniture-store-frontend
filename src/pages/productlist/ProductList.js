@@ -1,17 +1,20 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import axios from 'axios';
 import './productlist.scss';
 import Product from '../../components/product/Product';
-import { ProductContext } from '../../contexts/ProductContext';
+import {} from 'react';
 
 const ProductList = props => {
-  const [products, setProducts] = useContext(ProductContext);
+  const [categoryData, setCategoryData] = useState([]);
 
   //This gets us the type of category -> chair, table, etc.
   const type = props.match.params.id;
 
-  //We extract the specific object from products array [e.g. chairs]
-  //and take its data in specificTypeProducts [renamed]
-  const { [type]: specificTypeProducts } = products;
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/category/${type}`)
+      .then(res => setCategoryData(res.data));
+  }, []);
 
   return (
     <div className="container">
@@ -20,13 +23,17 @@ const ProductList = props => {
           <h1 className="capitalize">{type}</h1>
         </div>
         <div className="col d-flex justify-content-center flex-wrap">
-          {specificTypeProducts.map(product => (
-            <Product
-              name={product.name}
-              price={product.price}
-              productID={product.productID}
-            />
-          ))}
+          {console.log('category data')}
+          {console.log(categoryData.status)}
+          {categoryData.status === 'success'
+            ? categoryData.message.map(product => (
+                <Product
+                  name={product.name}
+                  price={product.price}
+                  productID={product.productID}
+                />
+              ))
+            : ''}
         </div>
       </div>
     </div>

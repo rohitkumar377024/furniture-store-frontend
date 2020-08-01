@@ -1,12 +1,11 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import axios from 'axios';
 import './productdetails.scss';
 import { Carousel } from 'react-bootstrap';
-import { ProductContext } from '../../contexts/ProductContext';
 import { CartContext } from '../../contexts/CartContext';
 import first from '../../assets/category.png';
 
 const ProductDetails = props => {
-  const [products, setProducts] = useContext(ProductContext);
   const [cartItems, setCartItems] = useContext(CartContext);
 
   //This gets us the productID - which we will use
@@ -27,11 +26,13 @@ const ProductDetails = props => {
 
   //Decides when to show 'ADD TO CART' or 'REMOVE FROM CART'.
   const [added, setAdded] = useState(inCart);
+  const [foundProduct, setFoundProduct] = useState({});
 
-  const { sofas, seating, tables, beds, storage, decor, dining, cupboards } = products;
-  const combined = [ ...sofas, ...seating, ...tables, 
-    ...beds, ...storage, ...decor, ...dining, ...cupboards];
-  const foundProduct = combined.filter(product => product.productID === productIDSearched)[0];
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/products/${productIDSearched}`)
+      .then(res => setFoundProduct(res.data.message));
+  }, []);
 
   const addToCart = () => {
     setCartItems(

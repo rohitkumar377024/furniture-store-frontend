@@ -5,7 +5,6 @@ const Search = () => {
   return (
     <div className="search">
       <p className="search-bar">
-        {' '}
         <span className="fa fa-search"></span> &nbsp; Search
       </p>
       <div className="divider"></div>
