@@ -21,6 +21,10 @@ $search-light: #9ba3ad;
   }
 }
 
+input:focus {
+  outline: none;
+}
+
 .search {
   background-color: $search-bar-bg;
   color: $search-light;
@@ -29,6 +33,10 @@ $search-light: #9ba3ad;
   margin-top: 16px;
   border-radius: 6px;
   font-weight: bold;
+  input {
+    border: none;
+    padding-bottom: 16px;
+  }
 }
 
 .search-bar {
@@ -37,7 +45,7 @@ $search-light: #9ba3ad;
 
 .search-result {
   list-style: none;
-  padding: 10px;
+  padding: 16px;
   color: $search-light;
   &:hover {
     background: $search-result-hover;
