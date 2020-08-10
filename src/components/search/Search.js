@@ -27,7 +27,7 @@ const Search = () => {
         onChange={e => {
           setSearchTerm(e.target.value);
           axios
-            .get(`http://localhost:3000/products/search?q=${searchTerm}`)
+            .get(`https://server.rohitkumar.xyz/products/search?q=${searchTerm}`)
             .then(res => setSearchResults(res.data.message));
         }}
       />

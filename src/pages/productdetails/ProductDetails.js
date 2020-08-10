@@ -30,7 +30,7 @@ const ProductDetails = props => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/products/${productIDSearched}`)
+      .get(`https://server.rohitkumar.xyz/products/${productIDSearched}`)
       .then(res => setFoundProduct(res.data.message));
   }, []);
 

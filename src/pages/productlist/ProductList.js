@@ -12,7 +12,7 @@ const ProductList = props => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/category/${type}`)
+      .get(`https://server.rohitkumar.xyz/category/${type}`)
       .then(res => setCategoryData(res.data));
   }, []);
 
